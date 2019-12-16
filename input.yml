@@ -1,0 +1,25 @@
+!CsvTable
+  Table: table1
+  InputTable: input.csv
+  Columns:
+    - Column: Produce
+      Convert: upper
+    - Column: Qty
+      Type: int
+    - Column: Price
+      Type: float
+    - Column: Total
+      AddField: "lambda row: row.Qty * row.Price"
+  
+  !CsvTable
+    Table: table1
+    InputTable: input.csv
+    Columns:
+      - Column: Produce
+        Convert: upper
+      - Column: Qty
+        Type: int
+      - Column: Price
+        Type: float
+      - Column: Total
+        AddField: "lambda row: row.Qty * row.Price"

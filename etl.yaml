@@ -1,0 +1,13 @@
+- JobName: Test ETL
+- !Version
+  Major: 0
+  Minor: 0
+  Patch: 1
+- !Tables
+  Comment: This is the master table list
+  - !CsvTable
+    FileName: input.csv
+    Columns:
+      - Column: A
+    
+    +
