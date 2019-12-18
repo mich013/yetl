@@ -1,6 +1,6 @@
-!CsvTable
+ !CsvTable
   Table: table1
-  InputTable: input.csv
+  InputTable: input1.csv
   Columns:
     - Column: Produce
       Convert: upper
@@ -12,8 +12,8 @@
       AddField: "lambda row: row.Qty * row.Price"
   
   !CsvTable
-    Table: table1
-    InputTable: input.csv
+    Table: table2
+    InputTable: input2.csv
     Columns:
       - Column: Produce
         Convert: upper

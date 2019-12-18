@@ -1,0 +1,5 @@
+ !CsvGen
+  Header: Inventory,Qty,Price
+  Count: 500
+  Row:  Inventory,Qty,Price
+  TableName: input1.csv 
