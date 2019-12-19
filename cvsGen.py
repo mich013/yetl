@@ -3,9 +3,24 @@ import random
 import sys
 import ruamel.yaml
 
+class ListPick():
+    def __init__(self, name=None, items=None):
+        self.name=name
+        self.items=items
+        
+
+    @classmethod
+    def from_yaml(cls, constructor, node):
+        for m in constructor.construct_yaml_map(node):
+            pass
+        return cls(m['Name'], m['Items'])
+
+    def __repr__(self):
+        return 'Version(name={.name}, items={.items})'.format(self, self)
+
 class CsvGen():
     def __init__(self, header=None, count=None, row=None, tablename=None):
-        self.header=headeer
+        self.header=header
         self.count=count
         self.row=row
         self.tablename=tablename
@@ -42,8 +57,9 @@ class CsvGen():
 if __name__=="__main__":
    yaml = ruamel.yaml.YAML(typ='safe')
    yaml.register_class(CsvGen)
+   yaml.register_class(ListPick)
    #yaml.register_class(Message)
    with open('CsvGen.yml') as fp:
        data = yaml.load(fp)
-   print(data)
+   print(type(data))
     

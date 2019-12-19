@@ -1,5 +1,16 @@
- !CsvGen
-  Header: Inventory,Qty,Price
-  Count: 500
-  Row:  Inventory,Qty,Price
-  TableName: input1.csv 
+config: debug
+!CsvGen
+ Header Inventory Qty Price
+ Count 500
+ Row  Inventory Qty Price
+ TableName input1.csv
+ !ListPick
+  Name InvList
+  Items
+   - Item Apples
+   - Item Pears
+   - Item Grapes
+   - Item Oranges
+   - Item Walnuts
+   - Item Almonds
+   - Item Pecans
